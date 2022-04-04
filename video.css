@@ -1,0 +1,89 @@
+.container-video-bg-fishing {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    position: fixed;
+    display: none;
+
+    z-index: 6;
+
+    background-color: rgb(0, 0, 0, 0.85);
+}
+.container-video-bg-hiking {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    
+    position: fixed;
+    display: none;
+    
+    z-index: 6;
+    
+    background-color: rgb(0, 0, 0, 0.85);
+}
+
+.container-video-bg-camping {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    
+    position: fixed;
+    display: none;
+    
+    z-index: 6;
+    
+    background-color: rgb(0, 0, 0, 0.85);
+}
+
+.container-video-fishing {
+position: absolute;
+display: none;
+
+z-index: 7;
+}
+
+
+.container-video-hiking {
+    position: absolute;
+    display: none;
+    
+    z-index: 7;
+}
+
+.container-video-camping {
+    position: absolute;
+    display: none;
+    
+    z-index: 7;
+}
+
+.close-button {
+    font-size: 35px;
+    font-weight: normal;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    
+    position: absolute;
+    display: inline-block;
+    
+    padding-top: -50px;
+    margin-top: -13px;
+    
+    right: 5px;
+    z-index: 7;
+}
+
+.close-button:hover {
+    text-decoration: underline;
+    color: rgba(255, 0, 0);
+}
+
+video {
+    width: 55vw;
+}
+
+

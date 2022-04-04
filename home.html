@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="video.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <title>Travelies</title>
+</head>
+
+<script src="./home.js"></script>
+<script src="./login.js"></script>
+<script src="./storage.js"></script>
+<script src="./video.js"></script>
+
+
+<body onload="checkLoginStat()">
+    <header>      
+        <div class="navbar-section">
+                <div>
+                    <img class="logo-header" src="./Assets/traveliesLogo.png" >
+                </div>
+                <nav id="navbar">
+                    <div id="nav-active" class="menu-nav-button-active">Home
+                        <div id="garis" class="garis"></div>
+                    </div>
+                    <div onmouseover="divhov()" onmouseleave="divleave()" class="menu-nav-button">About Us</div>
+                    <div onmouseover="divhov()" onmouseleave="divleave()" class="menu-nav-button">Start Adventure</div>
+                    <div onmouseover="divhov()" onmouseleave="divleave()" class="menu-nav-button">Rent</div>
+                    <div onmouseover="divhov()" onmouseleave="divleave()" class="menu-nav-button">Contact Us</div>
+                    <div id="menu-nav-button-login" class="menu-nav-button-login" onclick="loginMenuclick()" onmouseover="loginHover()" onmouseleave="loginLeave()">Login/Register
+                    </div>
+                    <div class="popup-login" id="popup-login"></div>
+                    </div>
+                </nav>
+
+        </div>
+    </header>
+    
+    <br><br><br>
+    
+    <div class="banner">
+        <img class="bg-1"  src="./Assets/bg.png">
+        <div class="greetings">
+            <div>
+                <span class="bold">Let Us </span>
+                Be Your Guide
+            </div>
+            <div class="greetings-desc">
+                A One of a Kind All 
+                <span class="bold">Inclusive Trip Expedition</span>
+            </div>
+            <div class="greetings-garis"></div>
+        </div>
+        
+    </div>
+    <div class="banner-foot">
+        <img class="vector-1" src="./Assets/vector-1.png" alt="">
+    </div>
+    
+   
+
+    <div class="section-places">
+        <div>
+            What <span class="bold">Activity</span> Do You Want To Do?
+        </div>
+
+        <div class="places-garis"></div>
+        
+    </div>
+
+    <br><br><br>
+    
+    <div class="container-fishing">
+        <div id="container-video-fishing" class="container-video-fishing">
+            <a class="close-button" id="close-button" onclick="videoBoxClose(1);">x</a>
+            <video id="video-1" class="video-1" controls>
+                <source src="./Assets/video-example.mp4" type="video/mp4">
+              </video>
+        </div>
+        <div class="container-video-bg-fishing" id="container-video-bg-fishing" onclick="videoBoxClose(1)"></div>
+        <div class="play-button-placeholder">
+            <div class="play-button" onclick="videoBoxOpen(1)">
+                <img class="play-icon" src="./Assets/play-icon.png" alt="">
+            </div>
+        </div>
+        <img class="fishing" src="./Assets/Fishing.png" alt="">
+        <div class="fishing-content-title">
+            
+            Fishing
+            <div class="fishing-content-garis"></div>
+            <div class="fishing-content-desc">For those of you who like sport fishing, you must experience fishing in Indonesia. As a maritime country, Indonesia has a rich marine life with various perfect fishing spots. Andaman Sea, Flores Sea, Banda Sea, Sawu Sea, Java Sea, Sulawesi Sea, East Sea, and Arafura Sea are waters that are popular tourist attractions in Indonesia.</div>
+            <div class="fishing-content-button">
+                <div class="fishing-visitor">
+                    <div class="visitor-icon">
+                        <img class="visitor-icon-img" src="./Assets/visitor-icon.png" alt="">
+                        <span class="visitor-counter">| 0</span>
+                    </div>
+                </div>
+                <div class="fishing-go">Go</div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container-hiking">
+        <div id="container-video-hiking" class="container-video-hiking">
+            <a class="close-button" id="close-button" onclick="videoBoxClose(2);">x</a>
+            <video id="video-2" class="video-2" controls>
+                <source src="./Assets/video-hiking.mp4" type="video/mp4">
+              </video>
+        </div>
+        <div class="container-video-bg-hiking" id="container-video-bg-hiking" onclick="videoBoxClose(2)"></div>
+        <div class="play-button-placeholder-right">
+            <div class="play-button" onclick="videoBoxOpen(2)">
+                <img class="play-icon" src="./Assets/play-icon.png" alt="">
+            </div>
+        </div>
+        <img class="hiking" src="./Assets/Hiking.png" alt="">
+        <div class="hiking-content-title">
+            Hiking
+            <div class="hiking-content-garis"></div>
+            <div class="hiking-content-desc">For those of you who are looking for a hiking adventure destination, Indonesia has mountain trails with stunning views ranging from xx to xx heights above sea level. You can see the amazing sky that the sun emerging throught the morning mist. Sky with a blazing blue fire, and exotic orangutans will wait you there.</div>
+            <div class="hiking-content-button">
+                <div class="hiking-visitor">
+                    <div class="visitor-icon">
+                        <img class="visitor-icon-img-right" src="./Assets/visitor-icon.png" alt="">
+                        <span class="visitor-counter">| 0</span>
+                    </div>
+                </div>
+                <div class="hiking-go">Go</div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    
+    
+    <div class="container-camping">
+        <div id="container-video-camping" class="container-video-camping">
+            <a class="close-button" id="close-button" onclick="videoBoxClose(3);">x</a>
+            <video id="video-3" class="video-3" controls>
+                <source src="./Assets/video-camping.mp4" type="video/mp4">
+              </video>
+        </div>
+        <div class="container-video-bg-camping" id="container-video-bg-camping" onclick="videoBoxClose(3)"></div>
+        <div class="play-button-placeholder">
+            <div class="play-button" onclick="videoBoxOpen(3)">
+                <img class="play-icon" src="./Assets/play-icon.png" alt="">
+            </div>
+        </div>
+        <img class="camping" src="./Assets/Camping.png" alt="">
+        <div class="camping-content-title">
+            
+            Camping
+            <div class="camping-content-garis"></div>
+            <div class="camping-content-desc">Camping is an activity that is perfect for those of you who want to try a different sensation for a vacation. Indonesia has a variety of comfortable and restored camping spots. These places are safe to use and of course have views that can spoil your eyes.</div>
+            <div class="camping-content-button">
+                <div class="camping-visitor">
+                    <div class="visitor-icon">
+                        <img class="visitor-icon-img" src="./Assets/visitor-icon.png" alt="">
+                        <span class="visitor-counter">| 0</span>
+                    </div>
+                </div>
+                <div class="camping-go">Go</div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="section-destination">
+        <img class="vector-2" src="./Assets/vector-2.png">
+        <div class="bg-2"></div>
+        <div class="destination-content-title">Popular <span class="bold">Destination</span> </div>
+        <div class="destination-content-garis"></div>
+
+        
+        <div class="destination-content-slider">
+            <div class="destination-content-slider-left">
+                <img src="./Assets/left-icon.png" alt="">
+            </div>
+            <div class="destination-content-slider-side-1">
+                <img class="destination-content-slider-side-1-img" src="./Assets/jakarta-slider.png" alt="">
+            </div>
+            <div class="destination-content-slider-side-2">
+                <img class="destination-content-slider-side-2-img" src="./Assets/bali-slider.png" alt="">
+            </div>
+            <div class="destination-content-slider-center">
+                <img class="destination-content-slider-center-img" src="./Assets/lombok-slider.png" alt="">
+                <div class="destination-content-slider-center-titleholder"></div>
+                <div class="destination-content-slider-center-placetitle">Lombok</div>
+            </div>
+            <div class="destination-content-slider-side-3">
+                <img class="destination-content-slider-side-3-img" src="./Assets/yogya-slider.png" alt="">
+            </div>
+            <div class="destination-content-slider-side-4">
+                <img class="destination-content-slider-side-4-img" src="./Assets/rajaampat-slider.png" alt="">
+            </div>
+            <div class="destination-content-slider-right">
+                <img src="./Assets/right-icon.png" alt="">
+            </div>
+        </div>
+        
+
+        <div class="destination-content-slider-desc">
+            <div class="dcsd-background-text-container">
+                <img class="dcsd-background-text" src="./Assets/lombok-bgtxt.png" alt="">
+                <span class="dcsd-text">LOMBOK</span>
+            </div>
+            <div class="dcsd-content">
+                <img src="./Assets/lombok-map.png" alt="">
+                <div class="dcsd-content-text">
+                    <p>
+                        Explore the island's miraculous wonder and discover hidden gems in every corner. Dive into the depths of Gili Islands waters, go through the forests and look for bewitching waterfalls, taste the authentic flavors of Ayam Taliwang and Sate Maranggi.
+                    </p>
+                    <br>
+                    <p>
+                        While waiting for the special trip packages, find the inspiration for your next travel to Lombok in this section.
+                        We will be waiting for you.
+                    </p>
+                </div>
+            </div>
+            <div class="dcsd-image">
+                <span class="dcsd-image-title"><span class="bold">Lombok's</span> collection</span>
+                <div class="dcsd-image-slider">
+                    <div class="dcsd-image-slider-img-1">
+                        <img class="dcsd-image-slider-imgs" src="./Assets/lombok-image-slider-1.png" alt="">
+                    </div>
+                    <div class="dcsd-image-slider-img">
+                        <img src="./Assets/lombok-image-slider-2.png" alt="">                        
+                    </div>
+                    <div class="dcsd-image-slider-img">
+                        <img src="./Assets/lombok-image-slider-3.png" alt="">
+                    </div>
+                    <div class="dcsd-image-slider-img">
+                        <img src="./Assets/lombok-image-slider-4.png" alt="">
+                    </div>
+                    <div class="dcsd-image-slider-img-5">
+                        <img src="./Assets/lombok-image-slider-5.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="foot-destination">
+        <img class="vector-3" src="./Assets/vector-3.png" alt="">
+    </div>
+
+    <footer>
+        <div class="section-footer">
+            <div class="footer-logo">
+                <img class="logo-footer" src="./Assets/logo-white.png" alt="">
+                <span class="logo-footer-desc">A One of a Kind All Inclusive Trip Expedition That Explore Nature Around Indonesia</span>
+                <div class="logo-footer-address ">
+                    <br>
+                    <pre class="tab">Address &nbsp;: Pakuan Street Number 5, Bogor, Indonesia</pre>
+                    <pre class="tab">Phone &emsp;: 021-6711791</pre>
+                    <pre class="tab">E-Mail &emsp;: support@travelies.id</pre>
+                </div>
+            </div>
+        </div>
+        <div class="section-footer-2">
+            <div class="section-explore">
+                <span class="se-title">Explore</span>
+                <div class="se-home">Home</div>
+                <div class="se-home">About Us</div>
+                <div class="se-home">Start Adventure</div>
+                <div class="se-home">Rent</div>
+                <div class="se-home">Contact Us</div>
+            </div>
+            <div class="section-join">
+                <span class="se-title">Join Our Newsletter</span>
+                <div class="sj-desc">Get E-mail updates about our latest shop and special offers. </div>
+                <div class="sj-emailbox">
+                    <div class="sj-desc-email">
+                        Email address...
+                    </div>
+                    <div class="sj-emailbox-subs">Subscribe</div>
+
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    
+    
+
+    <br><br><br>
+
+</body>
+</html>
